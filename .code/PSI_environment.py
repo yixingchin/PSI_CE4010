@@ -9,15 +9,6 @@ class PSI_environment:
 			q = number.getPrime(length)
 			r = number.getPrime(length)
 			if number.isPrime(2*p*q+1) and number.isPrime(2*r+1):
-				'''
-				j += 1
-				n = 4*p*q*r + 2*p*q + 2*r + 1
-				for g in range(generator_range-2):
-					if self.isGenerator(g+2, p, q, r, n):
-						break
-				if g != generator_range-3:
-					break
-				'''
 				break
 		n = 4*p*q*r + 2*p*q + 2*r + 1
 		u = pow(2, 4*q*r, n)

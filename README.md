@@ -11,7 +11,7 @@ Hence,  neither party reveals anythings to the other except for the intersection
 - Preprocessing of elements
 
 ## Motivation for Project
-Grab and Gojek are competitors in the transport industry. Despite being competitors, they still want to identify drivers who are double-dipping on both platforms. Therefore, there is a motivation not to reveal their private set of phone numbers to one another. Private Set Intersection enables the comparison of both private sets and shows only the intersection. <br />
+Grab and Gojek are competitors in the transport industry. Despite being competitors, they still want to identify drivers who are double-dipping on both platforms. Therefore, there is a motivation not to reveal their private set of phone numbers to one another but show the overlapping drivers. Private Set Intersection enables the comparison of both private sets and shows only the intersection. <br />
 
 We've decided to implement our PSI using an extension of Diffie Hellman as the encryption technique. Comparing it to Homomorphic Encryption, the main plus point is that we do not need a third party to keep the set secrets. Set secrets are kept locally and server can only 'ask' clients for the secret. Intersections are also only revealed to clients and not to the server.
 

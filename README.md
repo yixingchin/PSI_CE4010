@@ -19,6 +19,8 @@ Server side: <br />
 Client side: <br />
 
 ## User Guide:
+- To use This PSI service, a server is required to generate encryption parameters and distribute them to PSI clients. To run a server: <br />
+```python
 
 
 

@@ -21,9 +21,19 @@ Client side: <br />
 ## User Guide:
 - To use This PSI service, a server is required to generate encryption parameters and distribute them to PSI clients. To run a server: <br />
 ```python
+from PSI_server import *
 
+#if setting up a new server without environment instance
+server = PSI_server(False, 64, 10002)
+server.listen()
 
+#if setting up a new server with environment instance
+server = PSI_server(env, 64, 10002)
+server.listen()
 
+#instantiate a env
+env = PSI.environment(64)
+```
 
 
 

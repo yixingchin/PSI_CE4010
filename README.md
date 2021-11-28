@@ -4,7 +4,6 @@ PSI implementation, realising the paper "A More Efficient Cryptographic Matchmak
 ## Components:
 - Client-Server Communication <br />
 - Preprocessing of elements
-- 
 
 
 ## Dependencies:
@@ -15,10 +14,11 @@ PSI implementation, realising the paper "A More Efficient Cryptographic Matchmak
 
 
 ## Construction of Server-Client based PSI
-Server side: 
+Server side: <br />
 
+Client side: <br />
 
-# User Guide:
+## User Guide:
 
 
 

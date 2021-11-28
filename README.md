@@ -22,11 +22,14 @@ We've decided to implement our PSI using an extension of Diffie Hellman as the e
 
 
 ## Construction of Server-Client based PSI
-Server side: <br />
-
+Server side operations: <br />
+- The server only listens for communication requests from client
 
 Client side: <br />
-
+Most operations are done over at the client's side:
+- Apply/Check Signature
+- Encryption/Decryption
+- Hashing
 
 ## User Guide:
 - To use This PSI service, a server is required to generate encryption parameters and distribute them to PSI clients. To run a server: <br />

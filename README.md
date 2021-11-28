@@ -48,7 +48,7 @@ alice.prepare([1,3,5,7,9, 67,4,91,66,83,12,19,37,76,55])
 bob.listen("127.0.0.1", 10000)              # listening from alice on port 10000
 alice.request_intersect("127.0.0.1", 10001) # requesting bob on port 10001
 ```
--The intersection is done. <br />
+- The intersection is done. <br />
 ```python
 alice.intersection
 >>> [76, 91, 4, 3, 5, 9]

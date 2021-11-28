@@ -13,7 +13,13 @@ Hence,  neither party reveals anythings to the other except for the intersection
 ## Motivation for Project
 Grab and Gojek are competitors in the transport industry. Despite being competitors, they still want to identify drivers who are double-dipping on both platforms. Therefore, there is a motivation not to reveal their private set of phone numbers to one another but show the overlapping drivers. Private Set Intersection enables the comparison of both private sets and shows only the intersection. <br />
 
-We've decided to implement our PSI using an extension of Diffie Hellman as the encryption technique. Comparing it to Homomorphic Encryption, the main plus point is that we do not need a third party to keep the set secrets. Set secrets are kept locally and server can only 'ask' clients for the secret. Intersections are also only revealed to clients and not to the server.
+We've decided to implement our PSI using an extension of Diffie Hellman as the encryption technique. Comparing it to Homomorphic Encryption-based PSI:
+| Differences | HE | DH-extension |
+| --- | --- | --- |
+| Symmetric? | No, Server-Client | Yes, peers |
+| Who gets intersection? | Client | Both parties |
+
+We argue that a symmetric protocol is the suitable one for PSI between competing companies, ensuring no side can cheat while undiscovered.
 
 ## Dependencies:
 - PyCrypto <br />
@@ -24,11 +30,17 @@ We've decided to implement our PSI using an extension of Diffie Hellman as the e
 ## Construction of Server-Client based PSI
 Server side operations: <br />
 - The server only listens for communication requests from client
+- The server respond to client requests of:
+- 1. Subscribing the server for its encryption parameters
+- 2. Querying the server for peer RSA public keys
 
 Client side (most operations are done over at the client's side): <br />
-- Apply/Check Signature
-- Encryption/Decryption
-- Hashing
+- Apply/Check Signature upon first communication and generate session key
+- Hashing the elements to bins to reduce problem size, and for each bin:
+- 2 Rounds of encrypted transmission
+- Both clients can detect peer's dishonesty **(IMPORTANT!)**
+- Computationally hard to construct gerbage message while keeping peer unnoticed
+- Leaves extandability for parallel encryption/decryption implementation
 
 ## User Guide:
 - To use This PSI service, a server is required to generate encryption parameters and distribute them to PSI clients. To run a server: <br />

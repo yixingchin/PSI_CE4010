@@ -1,9 +1,18 @@
 # PSI_CE4010
 PSI implementation, realising the paper "A More Efficient Cryptographic Matchmaking Protocol for Use in the Absence of a Continuously Available Third Party" [1] into an application. <br />
+Private Set Intersection is basically a cryptographic technique that allows for two parties to compare encrypted versions of their personal set and reveal ONLY the intersection. 
+Hence,  neither party reveals anythings to the other except for the intersection.
+
 
 ## Components:
+- Motivation for Project
+- Dependencies
 - Client-Server Communication <br />
 - Preprocessing of elements
+
+## Motivation for Project
+Grab and Gojek are competitors in the transport industry. Despite being competitors, they still want to identify drivers who are double-dipping on both platforms. Therefore, there is a motivation not to reveal their private set of phone numbers to one another. Private Set Intersection enables the comparison of both private sets and shows only the intersection. <br />
+
 
 
 ## Dependencies:

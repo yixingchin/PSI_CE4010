@@ -25,8 +25,7 @@ We've decided to implement our PSI using an extension of Diffie Hellman as the e
 Server side operations: <br />
 - The server only listens for communication requests from client
 
-Client side: <br />
-Most operations are done over at the client's side:
+Client side (most operations are done over at the client's side): <br />
 - Apply/Check Signature
 - Encryption/Decryption
 - Hashing
